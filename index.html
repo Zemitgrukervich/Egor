@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#"><img src="./img/Group.svg" alt="logo"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container"> 
+            <Div  class="row"> 
+            
+                
+                    <img  class="right-png" src="./img/Vector1.png" alt="">
+                    <img  class="left-png" src="./img/Vector.png" alt="">     
+            </Div>
+            <div class="main-text">
+                <span class="big-text">Under Construction</span>
+                <span class="low-text">We're making lots of improvements and will be back soon</span>
+            </div>
+        </div>
+        <div class="timer" id="time">
+            <div>{{ remainingTime }}</div>
+        </div>
+        <div class="dhms">
+            
+            <div class="text-container">
+              <div class="image">
+                <img src="./img/Vector3.svg" alt="Image 1">
+                <div class="caption">Days</div>
+              </div>
+            </div>
+            
+            <div class="text-container">
+              <div class="image">
+                <img src="./img/Vector3.svg" alt="Image 2">
+                <div class="caption">Hours</div>
+              </div>
+            </div>
+            
+            
+            <div class="text-container">
+              <div class="image">
+                <img src="./img/Vector3.svg" alt="Image 3">
+                <div class="caption">Minutes</div>
+              </div>
+            </div>
+            
+            
+            <div class="text-container">
+              <div class="image">
+                <img src="./img/Vector3.svg" alt="Image 4">
+                <div class="caption">Secunds</div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="text-button">
+            <span>Check our event page when you wait:</span>
+            <button class="button">Go to the event</button>
+          </div> -->
+          <div class="text">
+            Check our event page when you wait:
+          </div>
+          <div class="button">
+            <div class="button__text">Go to the event</div>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16675 10H15.8334" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M10 4.16666L15.8333 9.99999L10 15.8333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          
+
+        </div>
+    </main>
+   
+    <footer>
+      <footer-container>
+        <div class="email-button" id="app">
+          <form class="form" @submit.prevent ="submitForm">
+            <input type="email" v-model="email" placeholder="Enter your Email and get notified" class="email-input" required>
+            <button type="submit" class="send-button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.1665 10H15.8332" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 4.16666L15.8333 10L10 15.8333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+          </form> 
+          <div v-if="popupMessage" class="popup">
+            {{ popupMessage }} 
+            <div v-if="success" class="success">
+                <div class="title">SUCCESS!</div>
+                <div class="subtitle">You have successfully subscribed to the email newsletter</div>
+                <div class="button__close">CLOSE</div>
+            </div>
+            <div v-if="error" class="error">
+                <div class="title">Error</div>
+                <div class="subtitle">Failed to subscribe to the email newsletter</div>
+                <div class="button__close">CLOSE</div>
+            </div>
+        </div>
+        
+
+
+
+        </div> 
+        <div class="wrapper">
+          <a href="#" class="wrapper__text">Other Events</a>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 5V19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19 12L12 19L5 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        
+      </footer-container>
+    </footer>
+    <div class="all-ivents">All events</div>
+   
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./src/script.js"></script>
+</body>     
+</html>
